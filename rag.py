@@ -11,6 +11,7 @@ embedder = SentenceTransformer("all-MiniLM-L6-v2")
 qa_model = pipeline("text2text-generation", model="google/flan-t5-base")
 
 DATA_DIR = "data"
+os.makedirs(DATA_DIR, exist_ok=True)
 INDEX_FILE = os.path.join(DATA_DIR, "index.faiss")
 META_FILE = os.path.join(DATA_DIR, "metadata.pkl")
 
